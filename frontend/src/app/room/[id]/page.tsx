@@ -4,15 +4,15 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { ArrowLeft, Radio, Clock } from 'lucide-react';
-import { RSSIGraph } from '@/pages/room-detail/components/RSSIGraph';
-import { EventLogTable } from '@/pages/room-detail/components/EventLogTable';
-import { ThresholdSettings } from '@/pages/room-detail/components/ThresholdSettings';
-import { BeaconInfoPanel } from '@/pages/room-detail/components/BeaconInfoPanel';
+import { RSSIGraph } from '@/views/room-detail/components/RSSIGraph';
+import { EventLogTable } from '@/views/room-detail/components/EventLogTable';
+import { ThresholdSettings } from '@/views/room-detail/components/ThresholdSettings';
+import { BeaconInfoPanel } from '@/views/room-detail/components/BeaconInfoPanel';
 import { generateMockRooms, generateRSSIData, generateRoomEventLogs, Beacon } from '@/utils/mockData';
 
 export default function RoomDetailPage() {
   const params = useParams();
-  const id = params.id as string;
+  const id = params?.id as string;
   const rooms = generateMockRooms();
   const room = rooms.find(r => r.id === id);
 

@@ -2,9 +2,9 @@
 
 import { useState } from 'react';
 import { Settings, Building, Sliders, Users } from 'lucide-react';
-import { RoomManagement } from '@/pages/admin-settings/components/RoomManagement';
-import { ThresholdManagement } from '@/pages/admin-settings/components/ThresholdManagement';
-import { UserPermission } from '@/pages/admin-settings/components/UserPermission';
+import { RoomManagement } from '@/views/admin-settings/components/RoomManagement';
+import { ThresholdManagement } from '@/views/admin-settings/components/ThresholdManagement';
+import { UserPermission } from '@/views/admin-settings/components/UserPermission';
 
 export default function AdminSettingsPage() {
   const [activeTab, setActiveTab] = useState<'rooms' | 'thresholds' | 'users'>('rooms');

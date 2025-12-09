@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Home, AlertCircle } from 'lucide-react';
 
 export function NotFound() {
@@ -12,7 +12,7 @@ export function NotFound() {
           요청하신 페이지가 존재하지 않거나 이동되었습니다.
         </p>
         <Link
-          to="/dashboard"
+          href="/dashboard"
           className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
         >
           <Home className="w-5 h-5" />

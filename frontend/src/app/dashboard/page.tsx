@@ -1,8 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { RoomCard } from '@/pages/dashboard/components/RoomCard';
-import { SystemStatusPanel } from '@/pages/dashboard/components/SystemStatusPanel';
+import { RoomCard } from '@/views/dashboard/components/RoomCard';
+import { SystemStatusPanel } from '@/views/dashboard/components/SystemStatusPanel';
 import { RefreshCw, Wifi, WifiOff } from 'lucide-react';
 import { dashboardApi, healthApi } from '@/utils/api';
 

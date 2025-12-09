@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import Link from 'next/link';
+import { useParams } from 'next/navigation';
 import { ArrowLeft, Radio, Clock } from 'lucide-react';
 import { RSSIGraph } from './components/RSSIGraph';
 import { EventLogTable } from './components/EventLogTable';
@@ -8,7 +9,8 @@ import { BeaconInfoPanel } from './components/BeaconInfoPanel';
 import { generateMockRooms, generateRSSIData, generateRoomEventLogs, Beacon } from '../../utils/mockData';
 
 export function RoomDetail() {
-  const { id } = useParams<{ id: string }>();
+  const params = useParams();
+  const id = params?.id as string;
   const rooms = generateMockRooms();
   const room = rooms.find(r => r.id === id);
 
@@ -61,7 +63,7 @@ export function RoomDetail() {
       <div className="flex flex-col h-full items-center justify-center">
         <div className="text-center">
           <h2 className="text-gray-900 mb-4">강의실을 찾을 수 없습니다</h2>
-          <Link to="/dashboard" className="text-[#81D18A] hover:underline">
+          <Link href="/dashboard" className="text-[#81D18A] hover:underline">
             대시보드로 돌아가기
           </Link>
         </div>
@@ -78,7 +80,7 @@ export function RoomDetail() {
       <div className="bg-white shadow-sm border-b border-gray-200 flex-shrink-0">
         <div className="px-8 py-6">
           <Link
-            to="/dashboard"
+            href="/dashboard"
             className="inline-flex items-center gap-2 text-blue-600 hover:underline mb-4"
           >
             <ArrowLeft className="w-4 h-4" />

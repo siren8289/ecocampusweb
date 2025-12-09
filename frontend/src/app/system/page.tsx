@@ -1,9 +1,9 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { SystemStatusPanel } from '@/pages/system-monitor/components/SystemStatusPanel';
-import { ScannerStatusList } from '@/pages/system-monitor/components/ScannerStatusList';
-import { BeaconListTable } from '@/pages/system-monitor/components/BeaconListTable';
+import { SystemStatusPanel } from '@/views/system-monitor/components/SystemStatusPanel';
+import { ScannerStatusList } from '@/views/system-monitor/components/ScannerStatusList';
+import { BeaconListTable } from '@/views/system-monitor/components/BeaconListTable';
 
 interface ServerStatus {
   status: 'online' | 'offline';
